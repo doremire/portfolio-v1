@@ -1,5 +1,4 @@
-
-  /* .FloatInfo{
+/* .FloatInfo{
     position:fixed;
     top:16px;
     right:16px;
@@ -38,19 +37,30 @@ h1 {
 
 .about-wrapper h2 {
     margin-left: 16px;
-    text-align: left;
+
 }
 
 .about-wrapper h3 {
     color: grey;
     margin-left: 24px;
     margin-top: -20px;
-    text-align: left;
+
 }
 
-ul {
+.about-wrapper {
     text-align: left;
+
 }
+
+.about-icon {
+    background-color: #c4c4c4;
+    border-radius: 10%;
+    height: 200px;
+    width: 200px;
+    float: left;
+    margin: 0 50px;
+}
+
 
 li {
     list-style-type: none;
@@ -83,16 +93,20 @@ li {
     float: right;
 }
 
-.item{
-margin-bottom: 300px;
+.item {
+    margin-bottom: 300px;
 }
 
-li{
-width: 111px;
-margin: auto;
+section li {
+    width: 111px;
+    margin: auto;
 }
 
-#nav-content a{
+section{
+    margin-top: 50px;
+}
+
+#nav-content a {
     font-weight: bold;
     font-size: larger;
     margin-top: 1rem;
@@ -101,17 +115,17 @@ margin: auto;
     color: #444444;
     display: flex;
     flex-direction: column;
-    
+
 }
 
 
-li:hover::marker{
+li:hover::marker {
     content: '👉';
 }
 
-.github-logo{
+.github-logo {
     margin-left: 105px;
-    padding: 6px;
+    padding: 7px;
     position: fixed;
 }
 
@@ -119,16 +133,35 @@ li:hover::marker{
 
 @media screen and (min-width:480px) {
     .about-wrapper {
-        width: 200px;
+        width: 500px;
     }
-    
+
 }
 
 @media screen and (max-width:480px) {
     h1 {
-        width: 312px;
+        width: 300px;
     }
 
+    .about-icon {
+        margin-left: 0px;
+        float: none;
+        margin: auto;
+    }
+
+    .about-wrapper ul {
+        width: 119px;
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    .about-wrapper li {
+        margin-left: -20px;
+    }
+
+    .about-wrapper {
+        text-align: center;
+    }
 }
 
 /* ====================================================================== */
@@ -245,20 +278,21 @@ header {
 
 /*ロゴやサイトタイトルをセンタリング*/
 .logo-area {
-    /* text-align: center; */
+    /* text-align: center;
     font-weight: bold;
     margin: 5px;
     text-decoration: none;
     color: #444444;
-    font-size: larger;
+    font-size: larger; */
+    margin: -23px;
 }
 
-.header-area{
+.header-area {
     position: fixed;
-    
+
 }
 
-.header-area-menu{
+.header-area-menu {
     position: fixed;
     right: 0;
 }
