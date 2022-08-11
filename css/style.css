@@ -1,18 +1,32 @@
+
+  /* .FloatInfo{
+    position:fixed;
+    top:16px;
+    right:16px;
+    width:240px;
+    height:60px;
+    background-color:#FFFFFF;
+  } */
+
+
 body {
     /* margin: 0 auto; */
     background-color: #dedede;
     font-family: sans-serif;
+    color: #444444;
 }
 
 /* ====================================================================== */
 
-.skills {
+.content {
     margin: auto;
     text-align: center;
     width: auto;
+    z-index: -1;
+    position: relative;
 }
 
-.skills p {
+.content p {
     margin: 16px 0;
 }
 
@@ -69,13 +83,45 @@ li {
     float: right;
 }
 
+.item{
+margin-bottom: 300px;
+}
+
+li{
+width: 111px;
+margin: auto;
+}
+
+#nav-content a{
+    font-weight: bold;
+    font-size: larger;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #444444;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+li:hover::marker{
+    content: '👉';
+}
+
+.github-logo{
+    margin-left: 105px;
+    padding: 6px;
+    position: fixed;
+}
 
 /* ====================================================================== */
 
 @media screen and (min-width:480px) {
     .about-wrapper {
-        width: 700px;
+        width: 200px;
     }
+    
 }
 
 @media screen and (max-width:480px) {
@@ -202,4 +248,17 @@ header {
     /* text-align: center; */
     font-weight: bold;
     margin: 5px;
+    text-decoration: none;
+    color: #444444;
+    font-size: larger;
+}
+
+.header-area{
+    position: fixed;
+    
+}
+
+.header-area-menu{
+    position: fixed;
+    right: 0;
 }

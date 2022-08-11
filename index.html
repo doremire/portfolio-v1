@@ -21,26 +21,35 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
 
-    <div class="header-logo-menu">
+    <div class="header-logo-menu header-area-menu">
         <div id="nav-drawer">
             <input id="nav-input" type="checkbox" class="nav-unshown">
             <label id="nav-open" for="nav-input"><span></span></label>
             <label class="nav-unshown" id="nav-close" for="nav-input"></label>
-            <div id="nav-content"><div class="icon">&nbsp;</div>
-            <p class="icon-text"><b>鳩サブレ</b></p>
-            <p>エンジニアになりたいです</p>
-                <p class="model-text"><b>CCライセンス</b>に則り使用しています</p>
-                <p class="model-text2">お借りしたモデル linus1178様</p>
+            <div id="nav-content">
+                <div class="icon">&nbsp;</div>
+                <p class="icon-text"><b>鳩サブレ</b></p>
+                <p>エンジニアになりたいです</p>
+
+               <section>
+                    <ul>
+                        <li><a onclick="checkbox0()">WORKS</a></li>
+                        <li><a onclick="checkbox1()">ABOUT</a></li>
+                        <li><a onclick="checkbox2()">SKILL</a></li>
+                    </ul>
+               </section>
+
             </div>
         </div>
     </div>
-    <div class="logo-area">Portfolio</div>
+    <a href="index.html" class="logo-area header-area">Portfolio</a>
 
+    <a href="https://github.com/NICu0/Portfolio"><img src="image/github.png" height="20px" class="github-logo" alt="GitHub Logo"></a>
     <!-- <div class="header"></div>
     <div class="mainv"></div>
     <div class="side"></div>
@@ -50,41 +59,50 @@
         <canvas id="myCanvas" style="pointer-events: none;"></canvas>
     </div>
 
-    <div class="skills">
-        <h1>WORKS</h1>
-        <h6>制作したもの</h6>
-        <p>LINE Bot</p>
-        <p>ウェブアプリケーション</p>
-        <p>ウェブサイト</p>
+    <div id="infoFrame" class="FloatInfo"></div>
 
-        <h1>ABOUT</h1>
-        <div style="margin: 0 auto;" class="about-wrapper">
-
-            <h2>Hello world!!</h2>
-            <h3>すべてはそこから</h3>
-            <ul>
-                <li>名前:鳩サブレ</li>
-                <li>現在:高校生です</li>
-                <li>内容:Web系</li>
-            </ul>
-            <!-- <p style="text-align: left;">はじめて触った言語はHTML/CSSでした、きっかけはSafariの拡張機能のデベロッパーツールでした<br>
-                当時は今のように自分のPCはなくiPadでHTML/CSS/Cを触っていました、PCを買ったのは最近の事です<br>
-                買ったのは中古で買った1万のノートパソコンです。パソコンは幼い頃から触っていました(幼稚園の頃親のパソコンでYouTubeを見てました)<br>
-                はじめて買った自分のパソコンはお世辞にも良い性能とは言えなく<br>
-                あとあと自分でメモリ交換したのはまた別のお話
-            </p> -->
+    <div class="content">
+        <div class="item">
+            <h1>WORKS</h1>
+            <h6>制作したもの</h6>
+            <p>LINE Bot</p>
+            <p>ウェブアプリケーション</p>
+            <p>ウェブサイト</p>
         </div>
 
-        <h1><b>SKILL</b></h1>
-        <p>HTML/CSS/SCSS</p>
-        <p>JavaScript</p>
-        <p>jQuery</p>
-        <p>three.js/WebGL</p>
-        <p>C</p>
-        <p>Git/GitHub</p>
-        <p>etc...</p>
+        <div class="item">
 
-        <p style="text-align:right; margin-top: 200px;">&copy; 2021 - 2022 Portfolio</p>
+            <h1>ABOUT</h1>
+            <div style="margin: 0 auto;" class="about-wrapper">
+
+                <h2>Hello world!!</h2>
+                <h3>すべてはそこから</h3>
+                <ul>
+                    <li>名前:鳩サブレ</li>
+                    <li>現在:高校生です</li>
+                    <li>内容:Web系</li>
+                </ul>
+                <!-- <p style="text-align: left;">はじめて触った言語はHTML/CSSでした、きっかけはSafariの拡張機能のデベロッパーツールでした<br>
+                    当時は今のように自分のPCはなくiPadでHTML/CSS/Cを触っていました、PCを買ったのは最近の事です<br>
+                    買ったのは中古で買った1万のノートパソコンです。パソコンは幼い頃から触っていました(幼稚園の頃親のパソコンでYouTubeを見てました)<br>
+                    はじめて買った自分のパソコンはお世辞にも良い性能とは言えなく<br>
+                    あとあと自分でメモリ交換したのはまた別のお話
+                </p> -->
+            </div>
+
+        </div>
+        <div class="item">
+            <h1><b>SKILL</b></h1>
+            <p>HTML/CSS/SCSS</p>
+            <p>JavaScript</p>
+            <p>jQuery</p>
+            <p>three.js/WebGL</p>
+            <p>C</p>
+            <p>Git/GitHub</p>
+            <p>etc...</p>
+        </div>
+
+        <p style="text-align:right; margin-top: 200px;">&copy; 2021 - 2022 Portfolio All rights reserved.</p>
     </div>
     <div class="footer"></div>
 
@@ -92,4 +110,3 @@
 </body>
 
 </html>
-
