@@ -1,0 +1,205 @@
+body {
+    /* margin: 0 auto; */
+    background-color: #dedede;
+    font-family: sans-serif;
+}
+
+/* ====================================================================== */
+
+.skills {
+    margin: auto;
+    text-align: center;
+    width: auto;
+}
+
+.skills p {
+    margin: 16px 0;
+}
+
+h1 {
+    border-bottom: solid 2px #555;
+    margin: 100px auto;
+    width: 700px;
+}
+
+.about-wrapper h2 {
+    margin-left: 16px;
+    text-align: left;
+}
+
+.about-wrapper h3 {
+    color: grey;
+    margin-left: 24px;
+    margin-top: -20px;
+    text-align: left;
+}
+
+ul {
+    text-align: left;
+}
+
+li {
+    list-style-type: none;
+}
+
+.icon {
+    background-color: #c4c4c4;
+    border-radius: 50%;
+    height: 100px;
+    left: 115px;
+    margin-top: -200px;
+    position: relative;
+    width: 100px;
+}
+
+.icon-text {
+    border-bottom: #555 solid 0.5px;
+    margin: 0 auto;
+    margin-bottom: -15px;
+    margin-top: 40px;
+    width: 200px;
+}
+
+.model-text {
+    float: right;
+    margin-top: 150px;
+}
+
+.model-text2 {
+    float: right;
+}
+
+
+/* ====================================================================== */
+
+@media screen and (min-width:480px) {
+    .about-wrapper {
+        width: 700px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    h1 {
+        width: 312px;
+    }
+
+}
+
+/* ====================================================================== */
+
+header {
+    background: #ccc;
+    padding: 10px;
+}
+
+#nav-drawer {
+    position: relative;
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+    display: none;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+    display: inline-block;
+    height: 22px;
+    vertical-align: middle;
+    width: 30px;
+}
+
+/*ハンバーガーの形をCSSで表現*/
+#nav-open span,
+#nav-open span:before,
+#nav-open span:after {
+    background: #555;
+    /*長さ*/
+    border-radius: 3px;
+    content: '';
+    cursor: pointer;
+    display: block;
+    height: 3px;
+    position: absolute;
+    /*線の太さ*/
+    width: 25px;
+}
+
+#nav-open span:before {
+    bottom: -8px;
+}
+
+#nav-open span:after {
+    bottom: -16px;
+}
+
+/*閉じる用の薄黒箇所*/
+#nav-close {
+    background: black;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    transition: .3s ease-in-out;
+    width: 100%;
+    z-index: 99;
+}
+
+/*メニューの中身*/
+#nav-content {
+    background: #fff;
+    /*最大幅（お好みで調整を）*/
+    height: 100%;
+    max-width: 330px;
+    overflow: auto;
+    padding-top: 300px;
+    position: fixed;
+    /* left: 0; */
+    right: 0;
+    text-align: center;
+    top: 0;
+    -webkit-transform: translateX(105%);
+    transform: translateX(105%);
+    transition: .3s ease-in-out;
+    width: 90%;
+    z-index: 9999;
+}
+
+/*チェックがついたら表示させる*/
+#nav-input:checked~#nav-close {
+    display: block;
+    opacity: .5;
+}
+
+#nav-input:checked~#nav-content {
+    box-shadow: 6px 0 25px rgba(0, 0, 0, .15);
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+}
+
+.header-logo-menu {
+    display: flex;
+    display: -moz-flex;
+    display: -o-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    float: right;
+}
+
+.header-logo-menu1 {
+    float: right;
+}
+
+/*ロゴやサイトタイトルをセンタリング*/
+.logo-area {
+    /* text-align: center; */
+    font-weight: bold;
+    margin: 5px;
+}
