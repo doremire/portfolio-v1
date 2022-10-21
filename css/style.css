@@ -26,13 +26,13 @@ body {
 }
 
 .content p {
-    margin: 16px 0;
+    /* margin: 16px 0; */
 }
 
 h1 {
     border-bottom: solid 2px #555;
     margin: 100px auto;
-    width: 700px;
+    width: 90%;
 }
 
 .about-wrapper h2 {
@@ -94,7 +94,7 @@ li {
 }
 
 .item {
-    margin-bottom: 300px;
+    /* margin-bottom: 300px; */
 }
 
 section li {
@@ -129,6 +129,8 @@ li:hover::marker {
     position: fixed;
 }
 
+
+
 /* ====================================================================== */
 
 @media screen and (min-width:480px) {
@@ -139,9 +141,9 @@ li:hover::marker {
 }
 
 @media screen and (max-width:480px) {
-    h1 {
+    /* h1 {
         width: 300px;
-    }
+    } */
 
     .about-icon {
         margin-left: 0px;
