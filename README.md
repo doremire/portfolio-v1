@@ -1,4 +1,4 @@
 # Portfolio
 
 three.jsを使ったポートフォリオ
-複数のjsvsscriptのライブラリを使用
+複数のJavaScriptのライブラリを使用
