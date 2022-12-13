@@ -1,137 +1,12 @@
-/* .FloatInfo{
-    position:fixed;
-    top:16px;
-    right:16px;
-    width:240px;
-    height:60px;
-    background-color:#FFFFFF;
-  } */
-
-
 body {
     /* margin: 0 auto; */
-    background-color: #dedede;
-    font-family: sans-serif;
+    /* background-color: #dedede; */
+    background-color: #f6f8fa;
+    /* font-family: sans-serif; */
     color: #444444;
 }
 
-/* ====================================================================== */
 
-.content {
-    margin: auto;
-    text-align: center;
-    width: auto;
-    z-index: -1;
-    position: relative;
-}
-
-.content p {
-    /* margin: 16px 0; */
-}
-
-h1 {
-    border-bottom: solid 2px #555;
-    margin: 100px auto;
-    width: 90%;
-}
-
-.about-wrapper h2 {
-    margin-left: 16px;
-
-}
-
-.about-wrapper h3 {
-    color: grey;
-    margin-left: 24px;
-    margin-top: -20px;
-
-}
-
-.about-wrapper {
-    text-align: left;
-
-}
-
-.about-icon {
-    background-color: #c4c4c4;
-    border-radius: 10%;
-    height: 200px;
-    width: 200px;
-    float: left;
-    margin: 0 50px;
-}
-
-
-li {
-    list-style-type: none;
-}
-
-.icon {
-    background-color: #c4c4c4;
-    border-radius: 50%;
-    height: 100px;
-    left: 115px;
-    margin-top: -200px;
-    position: relative;
-    width: 100px;
-}
-
-.icon-text {
-    border-bottom: #555 solid 0.5px;
-    margin: 0 auto;
-    margin-bottom: -15px;
-    margin-top: 40px;
-    width: 200px;
-}
-
-.model-text {
-    float: right;
-    margin-top: 150px;
-}
-
-.model-text2 {
-    float: right;
-}
-
-.item {
-    /* margin-bottom: 300px; */
-}
-
-section li {
-    width: 111px;
-    margin: auto;
-}
-
-section{
-    margin-top: 50px;
-}
-
-#nav-content a {
-    font-weight: bold;
-    font-size: larger;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    text-decoration: none;
-    color: #444444;
-    display: flex;
-    flex-direction: column;
-
-}
-
-
-li:hover::marker {
-    content: '👉';
-}
-
-.github-logo {
-    margin-left: 105px;
-    padding: 7px;
-    position: fixed;
-}
-
-
-
-/* ====================================================================== */
 
 @media screen and (min-width:480px) {
     .about-wrapper {
@@ -146,15 +21,15 @@ li:hover::marker {
     } */
 
     .about-icon {
-        margin-left: 0px;
         float: none;
         margin: auto;
+        margin-left: 0px;
     }
 
     .about-wrapper ul {
-        width: 119px;
-        text-align: left;
         margin: 0 auto;
+        text-align: left;
+        width: 119px;
     }
 
     .about-wrapper li {
@@ -166,12 +41,11 @@ li:hover::marker {
     }
 }
 
-/* ====================================================================== */
-
-header {
-    background: #ccc;
-    padding: 10px;
+#main_canvas {
+    margin-top: -900px;
 }
+
+/* ====================================================================== */
 
 #nav-drawer {
     position: relative;
@@ -185,7 +59,7 @@ header {
 /*アイコンのスペース*/
 #nav-open {
     display: inline-block;
-    height: 22px;
+    height: 30px;
     vertical-align: middle;
     width: 30px;
 }
@@ -200,18 +74,22 @@ header {
     content: '';
     cursor: pointer;
     display: block;
-    height: 3px;
+    height: 6px;
     position: absolute;
     /*線の太さ*/
-    width: 25px;
+    width: 35px;
+    margin-top: -9px;
+    margin-left: -8px;
 }
 
 #nav-open span:before {
-    bottom: -8px;
+    bottom: -13px;
+    margin-left: -0px;
 }
 
 #nav-open span:after {
-    bottom: -16px;
+    bottom: -25px;
+    margin-left: -0px;
 }
 
 /*閉じる用の薄黒箇所*/
@@ -298,3 +176,72 @@ header {
     position: fixed;
     right: 0;
 }
+
+
+/* ============================================================ */
+
+  
+
+
+
+.container1 {
+    background-color: #fefefe;
+    box-sizing: border-box;
+    display: grid;
+    height: 100vh; opacity: .9;
+    overflow: hidden;
+    place-items: center;
+    pointer-events: none;
+    position: relative;
+    transition: opacity 500ms;
+    width: 100vw;
+    z-index: 0;
+    z-index: 0; 
+    z-index: 99;
+     }
+
+h2 {
+    animation: typing 2.5s steps(22), caret .4s step-end infinite alternate;
+    border-right: 5px solid #000;
+    color: #353535;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.3;
+    overflow: hidden;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 360px;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes caret {
+    50% {
+        border-color: transparent;
+        /*点滅させる*/
+    }
+}
+
+/* @media screen and (max-width:480px) {
+    h2 {
+        
+        font-size: 10px;
+    }
+
+} */
+
+/* ============================================================ */
+
+.realtimeuserscounter__attr{
+    display: none;
+}
+
+.navbar-item {
+    background-color: transparent;
+}
+
+

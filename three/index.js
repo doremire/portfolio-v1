@@ -33,12 +33,11 @@ function init() {
         
         // シーンを作成
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xdedede); // 背景色
+    scene.background = new THREE.Color(0xf6f8fa); // 背景色
 
 
     // コントローラ
     const controls = new THREE.OrbitControls(camera, renderer.domElement);
-    
 
 
 
@@ -108,7 +107,7 @@ function init() {
     // 床を作成
     const meshFloor = new THREE.Mesh(
         new THREE.BoxGeometry(5000, 0.1, 5000),
-        new THREE.MeshStandardMaterial({ color: 0xc0c0c0 }));
+        new THREE.MeshStandardMaterial({ color: 0xf6f8fa }));
     // 影を受け付ける
     meshFloor.receiveShadow = true;
     scene.add(meshFloor);
