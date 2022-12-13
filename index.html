@@ -67,6 +67,10 @@
                 transform: rotate(360deg);
             }
         }
+
+        .like:hover {
+            color: #363636;
+        }
     </style>
 </head>
 
@@ -103,21 +107,13 @@
             });
         });
 
-
-//その2：オブジェクトのプロパティとして保存するパターン
-localStorage.saveKey = 'a';
-
-
-//その2：オブジェクトのプロパティを取得するパターン
-var value = localStorage.saveKey;
-console.log(value);
     </script>
     <nav class="navbar" role="navigation" aria-label="main navigation" style="position: sticky; top: 0;">
         <div class="navbar-brand">
             <!-- <a class="navbar-item" href="/Portfolio/"></a> -->
             </figure>
             <a class="navbar-item" href="/Portfolio/index.html">
-                <b style="font-family: 'メイリオ';">高校生のサイト</b> 
+                <b style="font-family: 'メイリオ';">高校生のサイト</b>
             </a>
             </a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
@@ -175,17 +171,35 @@ console.log(value);
     <div id="main_canvas">
         <canvas id="myCanvas" style="pointer-events: none;"></canvas>
     </div>
-    <nav class="level is-mobile">
+    <nav class="level is-mobile" style="z-index: 999;">
         <div class="level-item has-text-centered">
             <div>
-                <p class="heading">RealTimeAccessCount</p>
+                <p class="heading">同接</p>
                 <p class="title realtimeuserscounter"></p>
             </div>
         </div>
         <div class="level-item has-text-centered">
             <div>
-                <p class="heading">AccessCount</p>
+                <p class="heading">訪問数</p>
                 <p class="title"><span id="visits"></span< /p>
+            </div>
+        </div>
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="heading">いいね数</p>
+                <p class="title"><span id="visits1"></span< /p>
+            </div>
+        </div>
+        <div class="level-item has-text-centered" style="z-index: 999;">
+            <div>
+                <p class="heading">いいね</p>
+                <div class="buttons">
+                    <!-- <form action="/Portfolio/index.html"> -->
+                    <button type="submit" class="button like" id="Like"
+                        style="background-color: transparent; border: none"><i id="like-icon"
+                            class="fa-regular fa-heart" style="font-size: 36px;"></i></button>
+                    <!-- </form> -->
+                </div>
             </div>
         </div>
     </nav>
@@ -248,47 +262,47 @@ console.log(value);
                 <strong>Doremire</strong> by 2021 - 2022 Portfolio All rights
                 reserved..
             </p>
-        </footer>
-        </div>
+    </footer>
+    </div>
 
-        <div class="box" style="margin: 0 100px;">
-            <article class="media">
-              <div class="media-left">
+    <div class="box" id="box" style="margin: 0 100px;">
+        <article class="media">
+            <div class="media-left">
                 <figure class="image is-64x64">
-                  <img class="is-rounded" src="/Portfolio/image/icon.png" alt="Image">
+                    <img class="is-rounded" src="/Portfolio/image/icon.png" alt="Image">
                 </figure>
-              </div>
-              <div class="media-content">
+            </div>
+            <div class="media-content">
                 <div class="content">
-                  <p>
-                    <strong>doremire</strong> <small>@doremire0</small> <small>たった今</small>
-                    <br>
-                 見に来てくれてありがとう！！<br>
-                 
-                  </p>
+                    <p>
+                        <strong>doremire</strong> <small>@doremire0</small> <small>たった今</small>
+                        <br>
+                        見に来てくれてありがとう！！<br>
+
+                    </p>
                 </div>
                 <nav class="level is-mobile">
-                  <div class="level-left">
-                    <a class="level-item" aria-label="reply">
-                      <span class="icon is-small">
-                        <i class="fas fa-reply" aria-hidden="true"></i>
-                      </span>
-                    </a>
-                    <a class="level-item" aria-label="retweet">
-                      <span class="icon is-small">
-                        <i class="fas fa-retweet" aria-hidden="true"></i>
-                      </span>
-                    </a>
-                    <a class="level-item" aria-label="like">
-                      <span class="icon is-small">
-                        <i class="fas fa-heart" aria-hidden="true"></i>
-                      </span>
-                    </a>
-                  </div>
+                    <div class="level-left">
+                        <a class="level-item" aria-label="reply">
+                            <span class="icon is-small">
+                                <i class="fas fa-reply" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <a class="level-item" aria-label="retweet">
+                            <span class="icon is-small">
+                                <i class="fas fa-retweet" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <a class="level-item" aria-label="like">
+                            <span class="icon is-small">
+                                <i class="fas fa-heart" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                    </div>
                 </nav>
-              </div>
-            </article>
-          </div>
+            </div>
+        </article>
+    </div>
 
     <script src="js/index.js"></script>
     <!-- リアルタイムユーザー数のカウントのライブラリを読み込み -->
@@ -296,12 +310,55 @@ console.log(value);
     <!-- アクセス数のカウントのライブラリを読み込み -->
     <script async
         src="https://api.countapi.xyz/hit/doremire.github.io/2d538281-a7c2-48cc-8507-772772280dd9?callback=websiteVisits"></script>
+    <!-- <script async
+        src="https://api.countapi.xyz/hit/doremire.github.io/9675030f-4421-4d1f-bc2a-f80d3920656e?callback=websiteVisits1"></script> -->
+    <script async
+        src="https://api.countapi.xyz/get/doremire.github.io/9675030f-4421-4d1f-bc2a-f80d3920656e?callback=websiteVisits1"></script>
+
     <script>
+
         function websiteVisits(response) {
             document.querySelector("#visits").textContent = response.value;
         }
+        function websiteVisits1(response) {
+            document.querySelector("#visits1").textContent = response.value;
+        }
+
+
+
+
+
+        const Like = document.getElementById('Like');
+        Like.addEventListener('mouseover', () => {
+            document.getElementById('like-icon').className = "fa-solid fa-heart";
+        });
+        Like.addEventListener('mouseout', () => {
+            document.getElementById('like-icon').className = "fa-regular fa-heart";
+            // document.getElementById('like-icon').style.color = "#ffcdcd";
+        });
+        Like.addEventListener('click', () => {
+            // alert("sine");
+            const script = document.createElement('script');
+            script.async = true;
+            script.async = !!async;
+            script.src = `https://api.countapi.xyz/hit/doremire.github.io/9675030f-4421-4d1f-bc2a-f80d3920656e`;
+            // script.type = 'module';
+            document.body.appendChild(script);
+
+            script.onload = () => {
+                console.log('Script loaded successfuly');
+            };
+
+            script.onerror = () => {
+                console.log('Error occurred while loading script');
+            };
+
+
+
+        });
+
     </script>
-    <!-- <h1>This site has been visited <span id="visits"></span> times.</h1> -->
+    <!-- <h1>This site has been visited <span id="visits1"></span> times.</h1> -->
 </body>
 
 </html>
