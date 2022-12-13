@@ -1,6 +1,4 @@
 body {
-    /* margin: 0 auto; */
-    /* background-color: #dedede; */
     background-color: #f6f8fa;
     /* font-family: sans-serif; */
     color: #444444;
@@ -8,179 +6,24 @@ body {
 
 
 
-@media screen and (min-width:480px) {
-    .about-wrapper {
-        width: 500px;
-    }
+@media screen and (min-width:300px) {
 
-}
-
-@media screen and (max-width:480px) {
-    /* h1 {
-        width: 300px;
-    } */
-
-    .about-icon {
-        float: none;
-        margin: auto;
-        margin-left: 0px;
-    }
-
-    .about-wrapper ul {
-        margin: 0 auto;
-        text-align: left;
-        width: 119px;
-    }
-
-    .about-wrapper li {
-        margin-left: -20px;
-    }
-
-    .about-wrapper {
-        text-align: center;
+    #main_canvas {
+        margin-top: 330px;
     }
 }
 
-#main_canvas {
-    margin-top: -900px;
-}
+/* @media screen and (max-width:480px) {} */
+
+
 
 /* ====================================================================== */
 
-#nav-drawer {
-    position: relative;
-}
-
-/*チェックボックス等は非表示に*/
-.nav-unshown {
-    display: none;
-}
-
-/*アイコンのスペース*/
-#nav-open {
-    display: inline-block;
-    height: 30px;
-    vertical-align: middle;
-    width: 30px;
-}
-
-/*ハンバーガーの形をCSSで表現*/
-#nav-open span,
-#nav-open span:before,
-#nav-open span:after {
-    background: #555;
-    /*長さ*/
-    border-radius: 3px;
-    content: '';
-    cursor: pointer;
-    display: block;
-    height: 6px;
-    position: absolute;
-    /*線の太さ*/
-    width: 35px;
-    margin-top: -9px;
-    margin-left: -8px;
-}
-
-#nav-open span:before {
-    bottom: -13px;
-    margin-left: -0px;
-}
-
-#nav-open span:after {
-    bottom: -25px;
-    margin-left: -0px;
-}
-
-/*閉じる用の薄黒箇所*/
-#nav-close {
-    background: black;
-    display: none;
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    transition: .3s ease-in-out;
-    width: 100%;
-    z-index: 99;
-}
-
-/*メニューの中身*/
-#nav-content {
-    background: #fff;
-    /*最大幅（お好みで調整を）*/
-    height: 100%;
-    max-width: 330px;
-    overflow: auto;
-    padding-top: 300px;
-    position: fixed;
-    /* left: 0; */
-    right: 0;
-    text-align: center;
-    top: 0;
-    -webkit-transform: translateX(105%);
-    transform: translateX(105%);
-    transition: .3s ease-in-out;
-    width: 90%;
-    z-index: 9999;
-}
-
-/*チェックがついたら表示させる*/
-#nav-input:checked~#nav-close {
-    display: block;
-    opacity: .5;
-}
-
-#nav-input:checked~#nav-content {
-    box-shadow: 6px 0 25px rgba(0, 0, 0, .15);
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-}
-
-.header-logo-menu {
-    display: flex;
-    display: -moz-flex;
-    display: -o-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    -ms-flex-direction: row;
-    -o-flex-direction: row;
-    flex-direction: row;
-    float: right;
-}
-
-.header-logo-menu1 {
-    float: right;
-}
-
-/*ロゴやサイトタイトルをセンタリング*/
-.logo-area {
-    /* text-align: center;
-    font-weight: bold;
-    margin: 5px;
-    text-decoration: none;
-    color: #444444;
-    font-size: larger; */
-    margin: -23px;
-}
-
-.header-area {
-    position: fixed;
-
-}
-
-.header-area-menu {
-    position: fixed;
-    right: 0;
-}
 
 
 /* ============================================================ */
 
-  
+
 
 
 
@@ -188,7 +31,8 @@ body {
     background-color: #fefefe;
     box-sizing: border-box;
     display: grid;
-    height: 100vh; opacity: .9;
+    height: 100vh;
+    opacity: .9;
     overflow: hidden;
     place-items: center;
     pointer-events: none;
@@ -196,9 +40,10 @@ body {
     transition: opacity 500ms;
     width: 100vw;
     z-index: 0;
-    z-index: 0; 
+    z-index: 0;
     z-index: 99;
-     }
+    margin-bottom: -900px;
+}
 
 h2 {
     animation: typing 2.5s steps(22), caret .4s step-end infinite alternate;
@@ -236,12 +81,10 @@ h2 {
 
 /* ============================================================ */
 
-.realtimeuserscounter__attr{
+.realtimeuserscounter__attr {
     display: none;
 }
 
 .navbar-item {
     background-color: transparent;
 }
-
-

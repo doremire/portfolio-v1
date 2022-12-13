@@ -53,7 +53,7 @@
             height: 40px;
             margin: 0 auto;
             border: 8px solid #e0e0e0;
-            border-top: 7px solid #ffcccc;
+            border-top: 7px solid #485fc7;
             border-radius: 50px;
             animation: loading 700ms linear 0ms infinite normal both;
         }
@@ -102,11 +102,24 @@
                 });
             });
         });
+
+
+//その2：オブジェクトのプロパティとして保存するパターン
+localStorage.saveKey = 'a';
+
+
+//その2：オブジェクトのプロパティを取得するパターン
+var value = localStorage.saveKey;
+console.log(value);
     </script>
     <nav class="navbar" role="navigation" aria-label="main navigation" style="position: sticky; top: 0;">
         <div class="navbar-brand">
-            <a class="navbar-item" href="/Portfolio/"></a>
+            <!-- <a class="navbar-item" href="/Portfolio/"></a> -->
             </figure>
+            <a class="navbar-item" href="/Portfolio/index.html">
+                <b style="font-family: 'メイリオ';">高校生のサイト</b> 
+            </a>
+            </a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
                 data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
@@ -162,7 +175,7 @@
     <div id="main_canvas">
         <canvas id="myCanvas" style="pointer-events: none;"></canvas>
     </div>
-    <nav class="level">
+    <nav class="level is-mobile">
         <div class="level-item has-text-centered">
             <div>
                 <p class="heading">RealTimeAccessCount</p>
@@ -175,31 +188,30 @@
                 <p class="title"><span id="visits"></span< /p>
             </div>
         </div>
-        <div class="level-item has-text-centered">
-            <div>
-                <p class="heading">null</p>
-                <p class="title">null</p>
-            </div>
-        </div>
-        <div class="level-item has-text-centered">
-            <div>
-                <p class="heading">null</p>
-                <p class="title">null</p>
-            </div>
-        </div>
     </nav>
     <section class="hero is-link">
         <div class="hero-body">
-            <p class="title">
-                Status
-            </p>
-            <p class="subtitle">
-                アクセス数
-            </p>
+
+            <div class="columns">
+                <div class="column">
+                    <p class="title">
+                        Status
+                    </p>
+                    <p class="subtitle">
+                        アクセス数
+                    </p>
+
+                </div>
+                <figure class="column image">
+                    <img src="/Portfolio/image/coding.png" alt="coding" style="margin: -7em; float: right;">
+                </figure>
+            </div>
+
         </div>
     </section>
-    
-    <footer class="footer">
+
+
+    <footer class="footer" style="height: 30rem;">
 
         <div class="column" style="width: 50%;">
             <a class="column" href="/Portfolio/index.html">Home</a>
@@ -208,16 +220,16 @@
             <a class="column" href="Blog.html">Blog</a>
             <a class="column" href="Contact.html">Contact</a>
         </div>
-        
+
 
         <div class="column has-text-right" style="position: relative; top: -264px; float: right;">
             <div class="column">
-                    <button class="button" style="border: none; background-color: transparent;">
-                        <span class="icon">
-                            <a href="https://github.com/doremire"><i class="fab fa-github"></i>
-                        </span>
-                        <span>GitHub</span>
-                    </button>
+                <button class="button" style="border: none; background-color: transparent;">
+                    <span class="icon">
+                        <a href="https://github.com/doremire"><i class="fab fa-github"></i>
+                    </span>
+                    <span>GitHub</span>
+                </button>
             </div></a>
 
             <div class="column">
@@ -228,21 +240,56 @@
                     <span>@doremire0</span></a>
                 </button>
             </div>
-            
-            <!-- <a class="column" href="/Portfolio/index.html">Home</a>
-            <a class="column" href="/Portfolio/About.html">About</a>
-            <a class="column" href="/Portfolio/Works.html">Works</a>
-            <a class="column" href="Blog.html">Blog</a>
-            <a class="column" href="Contact.html">Contact</a> -->
         </div>
-      
 
-        <div class="content has-text-right">
+
+        <div class="content" style="font-size: small; float: right;">
             <p>
-                <strong>Doremire</strong> by 2021 - 2022 Portfolio All rights reserved..
+                <strong>Doremire</strong> by 2021 - 2022 Portfolio All rights
+                reserved..
             </p>
+        </footer>
         </div>
-    </footer>
+
+        <div class="box" style="margin: 0 100px;">
+            <article class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img class="is-rounded" src="/Portfolio/image/icon.png" alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>doremire</strong> <small>@doremire0</small> <small>たった今</small>
+                    <br>
+                 見に来てくれてありがとう！！<br>
+                 
+                  </p>
+                </div>
+                <nav class="level is-mobile">
+                  <div class="level-left">
+                    <a class="level-item" aria-label="reply">
+                      <span class="icon is-small">
+                        <i class="fas fa-reply" aria-hidden="true"></i>
+                      </span>
+                    </a>
+                    <a class="level-item" aria-label="retweet">
+                      <span class="icon is-small">
+                        <i class="fas fa-retweet" aria-hidden="true"></i>
+                      </span>
+                    </a>
+                    <a class="level-item" aria-label="like">
+                      <span class="icon is-small">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                      </span>
+                    </a>
+                  </div>
+                </nav>
+              </div>
+            </article>
+          </div>
+
     <script src="js/index.js"></script>
     <!-- リアルタイムユーザー数のカウントのライブラリを読み込み -->
     <script src="https://realtimeusers.bycontrast.co/realtimeusers.js"></script>

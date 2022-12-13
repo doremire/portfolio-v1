@@ -23,8 +23,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <!-- our project just needs Font Awesome Solid + Brands -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
-    <!-- icon -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.1.0/simpleicons.svg" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -55,7 +53,7 @@
             height: 40px;
             margin: 0 auto;
             border: 8px solid #e0e0e0;
-            border-top: 7px solid #ffcccc;
+            border-top: 7px solid #485fc7;
             border-radius: 50px;
             animation: loading 700ms linear 0ms infinite normal both;
         }
@@ -78,10 +76,11 @@
 
 <body>
     <div class="loading">
-        <span class="circle"></span>
+        <!-- <span class="circle"></span> -->
     </div>
     <script>
         const loading = document.querySelector('.loading');
+        ;
 
         window.addEventListener('load', () => {
             loading.classList.add('hide');
@@ -110,8 +109,12 @@
     </script>
     <nav class="navbar" role="navigation" aria-label="main navigation" style="position: sticky; top: 0;">
         <div class="navbar-brand">
-            <a class="navbar-item" href="/Portfolio/"></a>
+            <!-- <a class="navbar-item" href="/Portfolio/"></a> -->
             </figure>
+            <a class="navbar-item" href="/Portfolio/index.html">
+                <b style="font-family: 'メイリオ';">高校生のサイト</b> 
+            </a>
+            </a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
                 data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
@@ -167,42 +170,7 @@
     <div id="main_canvas">
         <canvas id="myCanvas" style="pointer-events: none;"></canvas>
     </div>
-    <nav class="level">
-        <div class="level-item has-text-centered">
-            <div>
-                <p class="heading">RealTimeAccessCount</p>
-                <p class="title realtimeuserscounter"></p>
-            </div>
-        </div>
-        <div class="level-item has-text-centered">
-            <div>
-                <p class="heading">AccessCount</p>
-                <p class="title"><span id="visits"></span< /p>
-            </div>
-        </div>
-        <div class="level-item has-text-centered">
-            <div>
-                <p class="heading">null</p>
-                <p class="title">null</p>
-            </div>
-        </div>
-        <div class="level-item has-text-centered">
-            <div>
-                <p class="heading">Likes</p>
-                <p class="title">null</p>
-            </div>
-        </div>
-    </nav>
-    <section class="hero is-link">
-        <div class="hero-body">
-            <p class="title">
-                Status
-            </p>
-            <p class="subtitle">
-                Link subtitle
-            </p>
-        </div>
-    </section>
+
     <section class="section">
         <div class="container">
             <h1 class="has-text-centered title" style="margin: 4rem 0;">About</h1>
@@ -300,39 +268,19 @@
 
                 </div>
             </div>
-
-            <!-- <h1 class="has-text-centered title">Works</h1>
-            <h1 class="title">
-                Hello World
-            </h1>
-            <p class="subtitle">
-                My first website with <strong>Bulma</strong>!
-            </p>
-            <h1 class="has-text-centered title">Blog</h1>
-            <h1 class="title">
-                Hello World
-            </h1>
-            <p class="subtitle">
-                My first website with <strong>Bulma</strong>!
-            </p>
-            <h1 class="has-text-centered title">Contact</h1>
-            <h1 class="title">
-                Hello World
-            </h1>
-            <p class="subtitle">
-                My first website with <strong>Bulma</strong>!
-            </p> -->
         </div>
     </section>
-    <footer class="footer">
 
-        <div class="column">
+    <footer class="footer" style="height: 30rem;">
+
+        <div class="column" style="width: 50%;">
             <a class="column" href="/Portfolio/index.html">Home</a>
             <a class="column" href="/Portfolio/About.html">About</a>
             <a class="column" href="/Portfolio/Works.html">Works</a>
             <a class="column" href="Blog.html">Blog</a>
             <a class="column" href="Contact.html">Contact</a>
         </div>
+
 
         <div class="column has-text-right" style="position: relative; top: -264px; float: right;">
             <div class="column">
@@ -352,21 +300,16 @@
                     <span>@doremire0</span></a>
                 </button>
             </div>
-
-            <!-- <a class="column" href="/Portfolio/index.html">Home</a>
-            <a class="column" href="/Portfolio/About.html">About</a>
-            <a class="column" href="/Portfolio/Works.html">Works</a>
-            <a class="column" href="Blog.html">Blog</a>
-            <a class="column" href="Contact.html">Contact</a> -->
         </div>
 
 
-        <div class="content">
-            <p style="float: right;">
-                <strong>Doremire</strong> by 2021 - 2022 Portfolio All rights reserved..
+        <div class="content" style="font-size: small; float: right;">
+            <p>
+                <strong>Doremire</strong> by 2021 - 2022 Portfolio All rights
+                reserved..
             </p>
+        </footer>
         </div>
-    </footer>
     <script src="js/index.js"></script>
     <!-- リアルタイムユーザー数のカウントのライブラリを読み込み -->
     <script src="https://realtimeusers.bycontrast.co/realtimeusers.js"></script>
