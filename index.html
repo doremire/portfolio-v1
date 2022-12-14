@@ -24,19 +24,14 @@
     <!-- our project just needs Font Awesome Solid + Brands -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
         .loading {
-            position: fixed;
-            z-index: 1000;
-            width: 100%;
+            background: #fdfdfd;
             height: 100vh;
             margin: 0;
             padding: 0;
-            background: #fdfdfd;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
         }
 
         .loading.hide {
@@ -46,16 +41,16 @@
         }
 
         .loading .circle {
+            animation: loading 700ms linear 0ms infinite normal both;
+            border: 8px solid #e0e0e0;
+            border-radius: 50px;
+            border-top: 7px solid #485fc7;
             display: block;
+            height: 40px;
+            margin: 0 auto;
             position: relative;
             top: calc(50% - 20px);
             width: 40px;
-            height: 40px;
-            margin: 0 auto;
-            border: 8px solid #e0e0e0;
-            border-top: 7px solid #485fc7;
-            border-radius: 50px;
-            animation: loading 700ms linear 0ms infinite normal both;
         }
 
         @keyframes loading {
@@ -71,6 +66,38 @@
         .like:hover {
             color: #363636;
         }
+
+        @media screen and (max-width:480px) {
+            .box {
+                margin: 0 10px;
+            }
+        }
+
+        @media screen and (min-width:480px) {
+            .box {
+                margin: 0 50px;
+            }
+        }
+
+        .box {
+            bottom: 0;
+            left: 0;
+            position: fixed;
+            right: 0;
+            transition: transform 1s;
+            transform: translateY(200px);
+            z-index: 9999;
+        }
+
+        .boxs {
+            bottom: 0;
+            left: 0;
+            position: fixed;
+            right: 0;
+            transition: transform 1s;
+            transform: translateY(0px);
+            z-index: 9999;
+        }
     </style>
 </head>
 
@@ -80,7 +107,6 @@
     </div>
     <script>
         const loading = document.querySelector('.loading');
-        ;
 
         window.addEventListener('load', () => {
             loading.classList.add('hide');
@@ -142,8 +168,8 @@
                 </a>
             </div>
             <div class="navbar-end">
-                <a class="navbar-item" style="margin-left: 12px;">
-                    未完成
+                <a class="navbar-item" href="/Portfolio/Technology.html" style="margin-left: 12px;">
+                    Technology
                 </a>
                 <div class="navbar-item">
                     <p class="buttons">
@@ -194,11 +220,11 @@
             <div>
                 <p class="heading">いいね</p>
                 <div class="buttons">
-                    <!-- <form action="/Portfolio/index.html"> -->
+                    <form action="/Portfolio/index.html">
                     <button type="submit" class="button like" id="Like"
                         style="background-color: transparent; border: none"><i id="like-icon"
                             class="fa-regular fa-heart" style="font-size: 36px;"></i></button>
-                    <!-- </form> -->
+                    </form>
                 </div>
             </div>
         </div>
@@ -217,7 +243,8 @@
 
                 </div>
                 <figure class="column image">
-                    <img src="/Portfolio/image/coding.png" alt="coding" style="margin: -7em; float: right;">
+                    <img src="/Portfolio/image/coding.png" alt="coding"
+                        style="margin: -1em; float: right; object-fit: cover;">
                 </figure>
             </div>
 
@@ -265,7 +292,8 @@
     </footer>
     </div>
 
-    <div class="box" id="box" style="margin: 0 100px;">
+
+    <div class="box" id="box">
         <article class="media">
             <div class="media-left">
                 <figure class="image is-64x64">
@@ -277,7 +305,7 @@
                     <p>
                         <strong>doremire</strong> <small>@doremire0</small> <small>たった今</small>
                         <br>
-                        見に来てくれてありがとう！！<br>
+                        <samp id="box-text">見に来てくれてありがとう！！</samp>
 
                     </p>
                 </div>
@@ -302,7 +330,7 @@
                 </nav>
             </div>
         </article>
-    </div>
+    </div>;
 
     <script src="js/index.js"></script>
     <!-- リアルタイムユーザー数のカウントのライブラリを読み込み -->
@@ -316,6 +344,71 @@
         src="https://api.countapi.xyz/get/doremire.github.io/9675030f-4421-4d1f-bc2a-f80d3920656e?callback=websiteVisits1"></script>
 
     <script>
+
+
+
+        const box = document.getElementById("box");
+        const text = document.getElementById("box-text");
+
+        setTimeout(() => {
+            text.textContent = "見に来てくれてありがとう！！"
+            box.classList.add("boxs");
+            setTimeout(() => {
+                box.classList.remove("boxs");
+                setTimeout(() => {
+                    text.textContent = "ゆっくり見ていってね"
+                    box.classList.add("boxs");
+                    setTimeout(() => {
+                        box.classList.remove("boxs");
+                        setTimeout(() => {
+                            text.textContent = "良かったらツイッターフォローしてね"
+                            box.classList.add("boxs");
+                            setTimeout(() => {
+                                box.classList.remove("boxs");
+                                setTimeout(() => {
+                                    text.textContent = "これ作るの大変だった"
+                                    box.classList.add("boxs");
+                                    setTimeout(() => {
+                                        box.classList.remove("boxs");
+                                        setTimeout(() => {
+                                            text.textContent = "ごめん邪魔だよね?"
+                                            box.classList.add("boxs");
+                                            setTimeout(() => {
+                                                box.classList.remove("boxs");
+                                                setTimeout(() => {
+                                                    text.textContent = "ツイッターで絡んでくれたら嬉しい‼"
+                                                    box.classList.add("boxs");
+                                                    setTimeout(() => {
+                                                        box.classList.remove("boxs");
+                                                    }, 4000); //出る速さ
+                                                    // ======================
+                                                }, 6000);
+                                            }, 2000); //出る速さ
+                                            // ======================
+                                        }, 1000);
+                                    }, 4000); //出る速さ
+                                    // ======================
+                                }, 10000);
+                            }, 4000); //出る速さ
+                            // ======================
+                        }, 1000);
+                    }, 4000); //出る速さ
+                    // ======================
+                }, 1000);
+            }, 4000); //出る速さ
+            // ======================
+        }, 5000);
+
+
+
+
+
+
+
+
+
+
+
 
         function websiteVisits(response) {
             document.querySelector("#visits").textContent = response.value;
@@ -340,7 +433,7 @@
             // alert("sine");
             const script = document.createElement('script');
             script.async = true;
-            script.async = !!async;
+            // script.async = !!async;
             script.src = `https://api.countapi.xyz/hit/doremire.github.io/9675030f-4421-4d1f-bc2a-f80d3920656e`;
             // script.type = 'module';
             document.body.appendChild(script);
@@ -357,6 +450,8 @@
 
         });
 
+
+        // APIを非表示にする
     </script>
     <!-- <h1>This site has been visited <span id="visits1"></span> times.</h1> -->
 </body>
