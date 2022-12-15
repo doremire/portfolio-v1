@@ -205,7 +205,7 @@
     <h1 class="has-text-centered title" style="margin: 4rem 0;">Technology</h1>
     <div class="column">
         <div class="column">
-            <p>lang - HTML/CSS/JavaScript</p>
+            <p>Lang - HTML/CSS/JavaScript</p>
         </div>
         <div class="column">
             <p>Framework - Bulma</p>
@@ -214,7 +214,7 @@
             <p>API - Real Time Users API/Count API</p>
         </div>
         <div class="column">
-            <p>module - linus1178</p>
+            <p>Model - linus1178</p>
         </div>
     </div>
 
@@ -298,18 +298,10 @@
                 </nav>
             </div>
         </article>
-    </div>;
+    </div>
 
     <script src="js/index.js"></script>
-    <!-- リアルタイムユーザー数のカウントのライブラリを読み込み -->
-    <script src="https://realtimeusers.bycontrast.co/realtimeusers.js"></script>
-    <!-- アクセス数のカウントのライブラリを読み込み -->
-    <script async
-        src="https://api.countapi.xyz/hit/doremire.github.io/2d538281-a7c2-48cc-8507-772772280dd9?callback=websiteVisits"></script>
-    <!-- <script async
-        src="https://api.countapi.xyz/hit/doremire.github.io/9675030f-4421-4d1f-bc2a-f80d3920656e?callback=websiteVisits1"></script> -->
-    <script async
-        src="https://api.countapi.xyz/get/doremire.github.io/9675030f-4421-4d1f-bc2a-f80d3920656e?callback=websiteVisits1"></script>
+    
 
     <script>
 
@@ -317,73 +309,6 @@
 
         const box = document.getElementById("box");
         const text = document.getElementById("box-text");
-
-        // setTimeout(() => {
-        //     text.textContent = "見に来てくれてありがとう！！"
-        //     box.classList.add("boxs");
-        //     setTimeout(() => {
-        //         box.classList.remove("boxs");
-        //         setTimeout(() => {
-        //             text.textContent = "ゆっくり見ていってね"
-        //             box.classList.add("boxs");
-        //             setTimeout(() => {
-        //                 box.classList.remove("boxs");
-        //                 setTimeout(() => {
-        //                     text.textContent = "良かったらツイッターフォローしてね"
-        //                     box.classList.add("boxs");
-        //                     setTimeout(() => {
-        //                         box.classList.remove("boxs");
-        //                         setTimeout(() => {
-        //                             text.textContent = "これ作るの大変だった"
-        //                             box.classList.add("boxs");
-        //                             setTimeout(() => {
-        //                                 box.classList.remove("boxs");
-        //                                 setTimeout(() => {
-        //                                     text.textContent = "ごめん邪魔だよね?"
-        //                                     box.classList.add("boxs");
-        //                                     setTimeout(() => {
-        //                                         box.classList.remove("boxs");
-        //                                         setTimeout(() => {
-        //                                             text.textContent = "ツイッターで絡んでくれたら嬉しい‼"
-        //                                             box.classList.add("boxs");
-        //                                             setTimeout(() => {
-        //                                                 box.classList.remove("boxs");
-        //                                             }, 4000); //出る速さ
-        //                                             // ======================
-        //                                         }, 6000);
-        //                                     }, 2000); //出る速さ
-        //                                     // ======================
-        //                                 }, 1000);
-        //                             }, 4000); //出る速さ
-        //                             // ======================
-        //                         }, 10000);
-        //                     }, 4000); //出る速さ
-        //                     // ======================
-        //                 }, 1000);
-        //             }, 4000); //出る速さ
-        //             // ======================
-        //         }, 1000);
-        //     }, 4000); //出る速さ
-        //     // ======================
-        // }, 5000);
-
-
-
-
-
-
-
-
-
-
-
-
-        function websiteVisits(response) {
-            document.querySelector("#visits").textContent = response.value;
-        }
-        function websiteVisits1(response) {
-            document.querySelector("#visits1").textContent = response.value;
-        }
 
 
 
@@ -419,9 +344,6 @@
         });
 
 
-        // APIを非表示にする
     </script>
-    <!-- <h1>This site has been visited <span id="visits1"></span> times.</h1> -->
 </body>
-
 </html>

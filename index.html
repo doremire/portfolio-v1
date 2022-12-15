@@ -311,17 +311,18 @@
                 </nav>
             </div>
         </article>
-    </div>;
+    </div>
     <script src="js/index.js"></script>
     <!-- リアルタイムユーザー数のカウントのライブラリを読み込み -->
     <script src="https://realtimeusers.bycontrast.co/realtimeusers.js"></script>
     <!-- アクセス数のカウントのライブラリを読み込み -->
-    <script async
-        src="https://api.countapi.xyz/hit/doremire.github.io/2d538281-a7c2-48cc-8507-772772280dd9?callback=websiteVisits"></script>
-    <!-- <script async
-src="https://api.countapi.xyz/hit/doremire.github.io/9675030f-4421-4d1f-bc2a-f80d3920656e?callback=websiteVisits1"></script> -->
-    <script async
-        src="https://api.countapi.xyz/get/doremire.github.io/9675030f-4421-4d1f-bc2a-f80d3920656e?callback=websiteVisits1"></script>
+    <script
+        language="javascript">document.write(unescape('%3C%73%63%72%69%70%74%20%61%73%79%6E%63%0A%20%20%20%20%20%20%20%20%73%72%63%3D%22%68%74%74%70%73%3A%2F%2F%61%70%69%2E%63%6F%75%6E%74%61%70%69%2E%78%79%7A%2F%68%69%74%2F%64%6F%72%65%6D%69%72%65%2E%67%69%74%68%75%62%2E%69%6F%2F%32%64%35%33%38%32%38%31%2D%61%37%63%32%2D%34%38%63%63%2D%38%35%30%37%2D%37%37%32%37%37%32%32%38%30%64%64%39%3F%63%61%6C%6C%62%61%63%6B%3D%77%65%62%73%69%74%65%56%69%73%69%74%73%22%3E%3C%2F%73%63%72%69%70%74%3E'))</script>
+
+    <!-- いいね数 -->
+        <script
+            language="javascript">document.write(unescape('%3C%73%63%72%69%70%74%20%61%73%79%6E%63%0A%20%20%20%20%20%20%20%20%73%72%63%3D%22%68%74%74%70%73%3A%2F%2F%61%70%69%2E%63%6F%75%6E%74%61%70%69%2E%78%79%7A%2F%67%65%74%2F%64%6F%72%65%6D%69%72%65%2E%67%69%74%68%75%62%2E%69%6F%2F%39%36%37%35%30%33%30%66%2D%34%34%32%31%2D%34%64%31%66%2D%62%63%32%61%2D%66%38%30%64%33%39%32%30%36%35%36%65%3F%63%61%6C%6C%62%61%63%6B%3D%77%65%62%73%69%74%65%56%69%73%69%74%73%31%22%3E%3C%2F%73%63%72%69%70%74%3E'))</script>
+
     <script>
         const box = document.getElementById("box");
         const text = document.getElementById("box-text");
@@ -347,12 +348,12 @@ src="https://api.countapi.xyz/hit/doremire.github.io/9675030f-4421-4d1f-bc2a-f80
 
         // Mimikyuさんありがとうございました　==========================
         // message.forEach((m, i) => {
-            // setTimeout(() => {
-                // text.textContent = m;
-                // box.classList.add("boxs");
-                // setTimeout(box.classList.remove("boxs"), (i + 1) * 4000)
-                // }, (i + 1) * 5000);
-                // });
+        // setTimeout(() => {
+        // text.textContent = m;
+        // box.classList.add("boxs");
+        // setTimeout(box.classList.remove("boxs"), (i + 1) * 4000)
+        // }, (i + 1) * 5000);
+        // });
         // ========================================================
         // const message = ['メッセージ１', 'メッセージ2', 'メッセージ3']
         // let count = 0
@@ -387,7 +388,7 @@ src="https://api.countapi.xyz/hit/doremire.github.io/9675030f-4421-4d1f-bc2a-f80
             const script = document.createElement('script');
             script.async = true;
             // script.async = !!async;
-            script.src = `https://api.countapi.xyz/hit/doremire.github.io/9675030f-4421-4d1f-bc2a-f80d3920656e`;
+            script.src = `document.write(unescape('%68%74%74%70%73%3A%2F%2F%61%70%69%2E%63%6F%75%6E%74%61%70%69%2E%78%79%7A%2F%68%69%74%2F%64%6F%72%65%6D%69%72%65%2E%67%69%74%68%75%62%2E%69%6F%2F%39%36%37%35%30%33%30%66%2D%34%34%32%31%2D%34%64%31%66%2D%62%63%32%61%2D%66%38%30%64%33%39%32%30%36%35%36%65'))`;
             // script.type = 'module';
             document.body.appendChild(script);
             script.onload = () => {
@@ -399,7 +400,6 @@ src="https://api.countapi.xyz/hit/doremire.github.io/9675030f-4421-4d1f-bc2a-f80
         });
 // APIを非表示にする
     </script>
-    <!-- <h1>This site has been visited <span id="visits1"></span> times.</h1> -->
 </body>
 
 </html>
