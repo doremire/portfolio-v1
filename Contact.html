@@ -72,7 +72,7 @@
             opacity: 0;
         }
 
-          @media screen and (max-width:480px) {
+        @media screen and (max-width:480px) {
             .box {
                 margin: 0 10px;
             }
@@ -83,7 +83,6 @@
                 margin: 0 50px;
             }
         }
-
 
         .box {
             bottom: 0;
@@ -114,16 +113,12 @@
     <script>
         const loading = document.querySelector('.loading');
         ;
-
         window.addEventListener('load', () => {
             loading.classList.add('hide');
         }, false);
-
         setTimeout(() => {
-
             document.getElementById('container1').style.opacity = 0;
         }, 5000);
-
         document.addEventListener('DOMContentLoaded', () => {
             // Get all "navbar-burger" elements
             const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -145,7 +140,7 @@
             <!-- <a class="navbar-item" href="/Portfolio/"></a> -->
             </figure>
             <a class="navbar-item" href="/Portfolio/index.html">
-<p style="font-family: sans-serif;"><b>高校生のサイト</b></p>
+                <p style="font-family: sans-serif;"><b>高校生のサイト</b></p>
             </a>
             </a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
@@ -203,40 +198,34 @@
     <div id="main_canvas">
         <canvas id="myCanvas" style="pointer-events: none;"></canvas>
     </div>
-
-    <section class="section">
+    <section class="section" style="margin-top: -350px;">
         <div class="container">
-
             <h1 class="has-text-centered title" style="margin: 4rem 0;">Contact</h1>
-            
-
-        <div class="column">
             <div class="column">
-            <p></p><i class="fa-brands fa-twitter"></i>Twitter - @doremire0</p>
-            </div>
-            <div class="column">
-            <p></p><i class="fa-brands fa-discord"></i>Discord - doremire #8818</p>
-            </div>
-            <div class="column">
-            <p></p><i class="fa-brands fa-github"></i>GitHub - doremire</p>
-            </div>
-            <div class="column">
-            <p></p><i class="fa-brands fa-mastodon"></i>mastodon - #</p>
-            </div>
-            <div class="column">
-            <p><img width="60px" style="position: relative; top: 5px;" src="/Portfolio/image/Misskey.png" alt="">Misskey - #</p>
-            </div>
-            <div class="column">
-            <p></p><i class="fa-brands fa-reddit"></i>reddit - #</p>
-            </div>
+                <div class="column">
+                    <p></p><i class="fa-brands fa-twitter"></i>Twitter - @doremire0</p>
+                </div>
+                <div class="column">
+                    <p></p><i class="fa-brands fa-discord"></i>Discord - doremire #8818</p>
+                </div>
+                <div class="column">
+                    <p></p><i class="fa-brands fa-github"></i>GitHub - doremire</p>
+                </div>
+                <div class="column">
+                    <p></p><i class="fa-brands fa-mastodon"></i>mastodon - #</p>
+                </div>
+                <div class="column">
+                    <p><img width="60px" style="position: relative; top: 5px;" src="/Portfolio/image/Misskey.png"
+                            alt="">Misskey - #</p>
+                </div>
+                <div class="column">
+                    <p></p><i class="fa-brands fa-reddit"></i>reddit - #</p>
+                </div>
             </div>
         </div>
-
         </div>
     </section>
-
     <footer class="footer" style="height: 30rem;">
-
         <div class="column" style="width: 50%;">
             <a class="column" href="/Portfolio/index.html">Home</a>
             <a class="column" href="/Portfolio/About.html">About</a>
@@ -244,8 +233,6 @@
             <a class="column" href="Blog.html">Blog</a>
             <a class="column" href="Contact.html">Contact</a>
         </div>
-
-
         <div class="column has-text-right" style="position: relative; top: -264px; float: right;">
             <div class="column">
                 <button class="button" style="border: none; background-color: transparent;">
@@ -255,7 +242,6 @@
                     <span>GitHub</span>
                 </button>
             </div></a>
-
             <div class="column">
                 <button class="button is-primary" style="background-color: transparent;">
                     <span class="icon">
@@ -265,55 +251,50 @@
                 </button>
             </div>
         </div>
-
-
         <div class="content" style="font-size: small; float: right;">
             <p>
                 <strong>Doremire</strong> by 2021 - 2022 Portfolio All rights
                 reserved..
             </p>
-        </footer>
-        </div>
-
-        <div class="box" id="box">
-            <article class="media">
-                <div class="media-left">
-                    <figure class="image is-64x64">
-                        <img class="is-rounded" src="/Portfolio/image/icon.png" alt="Image">
-                    </figure>
+    </footer>
+    </div>
+    <div class="box" id="box">
+        <article class="media">
+            <div class="media-left">
+                <figure class="image is-64x64">
+                    <img class="is-rounded" src="/Portfolio/image/icon.png" alt="Image">
+                </figure>
+            </div>
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>doremire</strong> <small>@doremire0</small> <small>たった今</small>
+                        <br>
+                        <samp id="box-text">見に来てくれてありがとう！！</samp>
+                    </p>
                 </div>
-                <div class="media-content">
-                    <div class="content">
-                        <p>
-                            <strong>doremire</strong> <small>@doremire0</small> <small>たった今</small>
-                            <br>
-                            <samp id="box-text">見に来てくれてありがとう！！</samp>
-        
-                        </p>
+                <nav class="level is-mobile">
+                    <div class="level-left">
+                        <a class="level-item" aria-label="reply">
+                            <span class="icon is-small">
+                                <i class="fas fa-reply" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <a class="level-item" aria-label="retweet">
+                            <span class="icon is-small">
+                                <i class="fas fa-retweet" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <a class="level-item" aria-label="like">
+                            <span class="icon is-small">
+                                <i class="fas fa-heart" aria-hidden="true"></i>
+                            </span>
+                        </a>
                     </div>
-                    <nav class="level is-mobile">
-                        <div class="level-left">
-                            <a class="level-item" aria-label="reply">
-                                <span class="icon is-small">
-                                    <i class="fas fa-reply" aria-hidden="true"></i>
-                                </span>
-                            </a>
-                            <a class="level-item" aria-label="retweet">
-                                <span class="icon is-small">
-                                    <i class="fas fa-retweet" aria-hidden="true"></i>
-                                </span>
-                            </a>
-                            <a class="level-item" aria-label="like">
-                                <span class="icon is-small">
-                                    <i class="fas fa-heart" aria-hidden="true"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </nav>
-                </div>
-            </article>
-        </div>;
-
+                </nav>
+            </div>
+        </article>
+    </div>;
     <script src="js/index.js"></script>
     <!-- リアルタイムユーザー数のカウントのライブラリを読み込み -->
     <script src="https://realtimeusers.bycontrast.co/realtimeusers.js"></script>
@@ -321,28 +302,27 @@
     <script async
         src="https://api.countapi.xyz/hit/doremire.github.io/2d538281-a7c2-48cc-8507-772772280dd9?callback=websiteVisits"></script>
     <script>
-
         const box = document.getElementById("box");
-            const text = document.getElementById("box-text");
-
+        const text = document.getElementById("box-text");
+        const message = ["僕と連絡を取りたいの？", "僕のTwitterに送ってくれれば早く反応できると思うよ!", "良かったらツイッターフォローしてね"];
+        function Notification(count) {
             setTimeout(() => {
-                    text.textContent = "僕と連絡を取りたいの？"
-                    box.classList.add("boxs");
-                    setTimeout(() => {
-                        box.classList.remove("boxs");
-                        setTimeout(() => {
-                            text.textContent = "僕のTwitterに送ってくれれば早く反応できると思うよ!"
-                            box.classList.add("boxs");
-                            setTimeout(() => {
-                                box.classList.remove("boxs");
-
-                            }, 4000); //出る速さ
-                            // ======================
-                        }, 1000);
-                    }, 4000); //出る速さ
-                    // ======================
-                }, 2000);
-
+                text.textContent = message[count];
+                box.classList.add("boxs");
+                setTimeout(() => {
+                    box.classList.remove("boxs");
+                }, 4000)
+            }, 5000);
+        }
+        let i = 0;
+        const Interval = setInterval(() => {
+            if (i >= message.length) {
+                clearInterval(Interval)
+            } else {
+                Notification(i);
+                i++;
+            }
+        }, 5000);
         function websiteVisits(response) {
             document.querySelector("#visits").textContent = response.value;
         }

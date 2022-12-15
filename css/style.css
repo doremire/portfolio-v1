@@ -16,14 +16,24 @@ body {
         margin-top: 330px;
     }
 }
+@media screen and (minこ-width:1000px) {
 
-/* @media screen and (max-width:480px) {} */
+    #main_canvas {
+        margin-top: -1000px;
+    }
+}
+
+@media screen and (max-width:300px) {
+    #main_canvas {
+            margin-top: 100px;
+        }
+}
 
 
 
 /* ====================================================================== */
 
-
+Code Modifying Responsive Fix
 
 /* ============================================================ */
 

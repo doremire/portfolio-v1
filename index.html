@@ -107,16 +107,12 @@
     </div>
     <script>
         const loading = document.querySelector('.loading');
-
         window.addEventListener('load', () => {
             loading.classList.add('hide');
         }, false);
-
         setTimeout(() => {
-
             document.getElementById('container1').style.opacity = 0;
         }, 5000);
-
         document.addEventListener('DOMContentLoaded', () => {
             // Get all "navbar-burger" elements
             const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -132,14 +128,13 @@
                 });
             });
         });
-
     </script>
     <nav class="navbar" role="navigation" aria-label="main navigation" style="position: sticky; top: 0;">
         <div class="navbar-brand">
             <!-- <a class="navbar-item" href="/Portfolio/"></a> -->
             </figure>
             <a class="navbar-item" href="/Portfolio/index.html">
-<p style="font-family: sans-serif;"><b>高校生のサイト</b></p>
+                <p style="font-family: sans-serif;"><b>高校生のサイト</b></p>
             </a>
             </a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
@@ -194,7 +189,7 @@
     <div class="container1" id="container1">
         <h2 class="is-size-3" id="text">Doremire &nbsp; Portfolio</h2>
     </div>
-    <div id="main_canvas">
+    <div id="main_canvas" style="margin-top: -350px;">
         <canvas id="myCanvas" style="pointer-events: none;"></canvas>
     </div>
     <nav class="level is-mobile" style="z-index: 999;">
@@ -221,9 +216,9 @@
                 <p class="heading">いいね</p>
                 <div class="buttons">
                     <form action="/Portfolio/index.html">
-                    <button type="submit" class="button like" id="Like"
-                        style="background-color: transparent; border: none"><i id="like-icon"
-                            class="fa-regular fa-heart" style="font-size: 36px;"></i></button>
+                        <button type="submit" class="button like" id="Like"
+                            style="background-color: transparent; border: none"><i id="like-icon"
+                                class="fa-regular fa-heart" style="font-size: 36px;"></i></button>
                     </form>
                 </div>
             </div>
@@ -231,7 +226,6 @@
     </nav>
     <section class="hero is-link">
         <div class="hero-body">
-
             <div class="columns">
                 <div class="column">
                     <p class="title">
@@ -240,20 +234,15 @@
                     <p class="subtitle">
                         アクセス数
                     </p>
-
                 </div>
                 <figure class="column image">
                     <img src="/Portfolio/image/coding.png" alt="coding"
                         style="margin: -1em; float: right; object-fit: cover;">
                 </figure>
             </div>
-
         </div>
     </section>
-
-
     <footer class="footer" style="height: 30rem;">
-
         <div class="column" style="width: 50%;">
             <a class="column" href="/Portfolio/index.html">Home</a>
             <a class="column" href="/Portfolio/About.html">About</a>
@@ -261,8 +250,6 @@
             <a class="column" href="Blog.html">Blog</a>
             <a class="column" href="Contact.html">Contact</a>
         </div>
-
-
         <div class="column has-text-right" style="position: relative; top: -264px; float: right;">
             <div class="column">
                 <button class="button" style="border: none; background-color: transparent;">
@@ -272,7 +259,6 @@
                     <span>GitHub</span>
                 </button>
             </div></a>
-
             <div class="column">
                 <button class="button is-primary" style="background-color: transparent;">
                     <span class="icon">
@@ -282,8 +268,6 @@
                 </button>
             </div>
         </div>
-
-
         <div class="content" style="font-size: small; float: right;">
             <p>
                 <strong>Doremire</strong> by 2021 - 2022 Portfolio All rights
@@ -291,8 +275,6 @@
             </p>
     </footer>
     </div>
-
-
     <div class="box" id="box">
         <article class="media">
             <div class="media-left">
@@ -306,7 +288,6 @@
                         <strong>doremire</strong> <small>@doremire0</small> <small>たった今</small>
                         <br>
                         <samp id="box-text">見に来てくれてありがとう！！</samp>
-
                     </p>
                 </div>
                 <nav class="level is-mobile">
@@ -331,7 +312,6 @@
             </div>
         </article>
     </div>;
-
     <script src="js/index.js"></script>
     <!-- リアルタイムユーザー数のカウントのライブラリを読み込み -->
     <script src="https://realtimeusers.bycontrast.co/realtimeusers.js"></script>
@@ -339,88 +319,61 @@
     <script async
         src="https://api.countapi.xyz/hit/doremire.github.io/2d538281-a7c2-48cc-8507-772772280dd9?callback=websiteVisits"></script>
     <!-- <script async
-        src="https://api.countapi.xyz/hit/doremire.github.io/9675030f-4421-4d1f-bc2a-f80d3920656e?callback=websiteVisits1"></script> -->
+src="https://api.countapi.xyz/hit/doremire.github.io/9675030f-4421-4d1f-bc2a-f80d3920656e?callback=websiteVisits1"></script> -->
     <script async
         src="https://api.countapi.xyz/get/doremire.github.io/9675030f-4421-4d1f-bc2a-f80d3920656e?callback=websiteVisits1"></script>
-
     <script>
-
-
-
         const box = document.getElementById("box");
         const text = document.getElementById("box-text");
-
-        setTimeout(() => {
-            text.textContent = "見に来てくれてありがとう！！"
-            box.classList.add("boxs");
+        const message = ["見に来てくれてありがとう！！", "ゆっくり見ていってね", "良かったらツイッターフォローしてね", "これ作るの大変だった", "ツイッターで絡んでくれたら嬉しい‼"];
+        function Notification(count) {
             setTimeout(() => {
-                box.classList.remove("boxs");
+                text.textContent = message[count];
+                box.classList.add("boxs");
                 setTimeout(() => {
-                    text.textContent = "ゆっくり見ていってね"
-                    box.classList.add("boxs");
-                    setTimeout(() => {
-                        box.classList.remove("boxs");
-                        setTimeout(() => {
-                            text.textContent = "良かったらツイッターフォローしてね"
-                            box.classList.add("boxs");
-                            setTimeout(() => {
-                                box.classList.remove("boxs");
-                                setTimeout(() => {
-                                    text.textContent = "これ作るの大変だった"
-                                    box.classList.add("boxs");
-                                    setTimeout(() => {
-                                        box.classList.remove("boxs");
-                                        setTimeout(() => {
-                                            text.textContent = "ごめん邪魔だよね?"
-                                            box.classList.add("boxs");
-                                            setTimeout(() => {
-                                                box.classList.remove("boxs");
-                                                setTimeout(() => {
-                                                    text.textContent = "ツイッターで絡んでくれたら嬉しい‼"
-                                                    box.classList.add("boxs");
-                                                    setTimeout(() => {
-                                                        box.classList.remove("boxs");
-                                                    }, 4000); //出る速さ
-                                                    // ======================
-                                                }, 6000);
-                                            }, 2000); //出る速さ
-                                            // ======================
-                                        }, 1000);
-                                    }, 4000); //出る速さ
-                                    // ======================
-                                }, 10000);
-                            }, 4000); //出る速さ
-                            // ======================
-                        }, 1000);
-                    }, 4000); //出る速さ
-                    // ======================
-                }, 1000);
-            }, 4000); //出る速さ
-            // ======================
+                    box.classList.remove("boxs");
+                }, 4000)
+            }, 5000);
+        }
+        let i = 0;
+        const Interval = setInterval(() => {
+            if (i >= message.length) {
+                clearInterval(Interval)
+            } else {
+                Notification(i);
+                i++;
+            }
         }, 5000);
 
-
-
-
-
-
-
-
-
-
-
-
+        // Mimikyuさんありがとうございました　==========================
+        // message.forEach((m, i) => {
+            // setTimeout(() => {
+                // text.textContent = m;
+                // box.classList.add("boxs");
+                // setTimeout(box.classList.remove("boxs"), (i + 1) * 4000)
+                // }, (i + 1) * 5000);
+                // });
+        // ========================================================
+        // const message = ['メッセージ１', 'メッセージ2', 'メッセージ3']
+        // let count = 0
+        // const interval = setInterval(() => {
+        // document.getElementById("box-text").textContent = message[count]
+        // document.getElementById("box").classList.add("boxs")
+        // count++
+        // if (count === message.length) {
+        // clearInterval(interval)
+        // console.log('end');
+        // } else {
+        // console.log(count);
+        // }
+        // }, 5000)
+        // ========================================================
         function websiteVisits(response) {
             document.querySelector("#visits").textContent = response.value;
         }
         function websiteVisits1(response) {
             document.querySelector("#visits1").textContent = response.value;
         }
-
-
-
-
-
         const Like = document.getElementById('Like');
         Like.addEventListener('mouseover', () => {
             document.getElementById('like-icon').className = "fa-solid fa-heart";
@@ -437,21 +390,14 @@
             script.src = `https://api.countapi.xyz/hit/doremire.github.io/9675030f-4421-4d1f-bc2a-f80d3920656e`;
             // script.type = 'module';
             document.body.appendChild(script);
-
             script.onload = () => {
                 console.log('Script loaded successfuly');
             };
-
             script.onerror = () => {
                 console.log('Error occurred while loading script');
             };
-
-
-
         });
-
-
-        // APIを非表示にする
+// APIを非表示にする
     </script>
     <!-- <h1>This site has been visited <span id="visits1"></span> times.</h1> -->
 </body>
