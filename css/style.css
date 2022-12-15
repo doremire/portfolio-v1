@@ -17,6 +17,12 @@ body {
         margin-top: -1000px;
     }
 }
+@media screen and (min-width:2000px) {
+
+    #main_canvas {
+        margin-top: -100px;
+    }
+}
 
 @media screen and (max-width:480px) {
     #main_canvas {
